@@ -32,7 +32,7 @@
 
             <div class="right-box">
                 <div class="aside-right">
-                    <router-view/>
+                    <router-view />
                 </div>
 
                 <div class="aside-right__bottom"></div>
