@@ -3,7 +3,8 @@
         <div class="main-box">
             <div class="aside-left">
                 <div class="aside-left__box">
-                    <h1>i-MUSIC</h1>
+                    <h1 class="logo">i-MUSIC</h1>
+                    <h1 class="logo-small">M</h1>
 
                     <ul>
                         <router-link to="/search" :class="{'active': $route.path === '/search'}">
@@ -65,11 +66,14 @@ export default class HomeComponent extends Vue {}
     justify-content: space-between
 
     &__box
-        h1
+        .logo
             font-size: 24px
             font-weight: bold
             color: yellow
             margin: 18px 0 48px
+
+        .logo-small
+            display: none
 
         a
             display: flex
@@ -106,5 +110,31 @@ export default class HomeComponent extends Vue {}
         background-color: #080808
         border-radius: 16px
         border: 1px solid #1c1c1c
+
+
+@media (max-width: 768px)
+    .main-box
+        padding: 12px 12px 12px 0
+
+    .right-box
+        width: calc(100% - 68px)
+
+    .aside-left
+        width: 68px
+        align-items: center
+
+        &__box
+            .logo
+                display: none
+
+            .logo-small
+                display: block
+                font-size: 24px
+                font-weight: bold
+                color: yellow
+                margin: 18px 0 48px
+
+            li
+                display: none
 
 </style>
