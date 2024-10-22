@@ -52,10 +52,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="new-release">
-                <h1>Новые релизы <i class="fa-solid fa-chevron-right"></i></h1>
+                <div class="new-release">
+                    <h1>Новые релизы <i class="fa-solid fa-chevron-right"></i></h1>
+                </div>
             </div>
         </div>
     </div>
@@ -100,14 +100,15 @@ export default class HomePage extends Vue {
 .home-page
     display: flex
     flex-direction: column
-    height: 100%
+    height: calc( 100vh - 150px )
 
 .home-content
-    padding: 12px
+    padding: 0 24px
     border-radius: 16px
     transition: all .2s
     border: 1px solid #1c1c1c
-    margin-bottom: 24px
+    height: calc( 100vh - 150px )
+    overflow-y: scroll
 
 .play-box
     display: flex
@@ -222,6 +223,8 @@ export default class HomePage extends Vue {
 
 
 .new-release
+    margin-top: 24px
+
     h1
         font-size: 22px
         font-weight: 500
@@ -255,10 +258,6 @@ export default class HomePage extends Vue {
             i
                 font-size: 12px
 
-    .home-page
-        height: calc( 100vh - 12px )
-        overflow-y: scroll
-
     .play-box
         height: 260px
 
@@ -267,9 +266,6 @@ export default class HomePage extends Vue {
         border-radius: 16px
         transition: all .2s
         border: 1px solid #1c1c1c
-
-    .new-release
-        margin-bottom: 136px
 
     
 @media (max-width: 430px)
