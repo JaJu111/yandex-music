@@ -200,11 +200,15 @@ export default class HomeComponent extends Vue {}
 
     .right-box
         width: calc(100% - 68px)
+        margin-left: 68px
 
     .aside-left
+        position: fixed
+        left: 0
+        top: 0
         width: 68px
         align-items: center
-        padding-bottom: 120px
+        padding: 30px 0 132px 0
 
         &__box
             .logo
