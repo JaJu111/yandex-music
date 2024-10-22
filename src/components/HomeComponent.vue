@@ -83,9 +83,9 @@ export default class HomeComponent extends Vue {}
     height: 120px
     bottom: 0
     left: 0
-    backdrop-filter: blur(20px)
-    border-top-left-radius: 12px
-    border-top-right-radius: 12px
+    backdrop-filter: blur(12px)
+    border-top-left-radius: 16px
+    border-top-right-radius: 16px
 
 .main-bottom-bg
     display: none
@@ -94,10 +94,10 @@ export default class HomeComponent extends Vue {}
     height: 120px
     bottom: 0
     left: 0
-    background-color: #1a1a1a
+    background-color: #252525
     opacity: 0.8
-    border-top-left-radius: 12px
-    border-top-right-radius: 12px
+    border-top-left-radius: 16px
+    border-top-right-radius: 16px
 
 .main-box
     display: flex
@@ -148,9 +148,6 @@ export default class HomeComponent extends Vue {}
 .aside-right
     width: 100%
     height: 100%
-    background-color: #080808
-    border-radius: 16px
-    border: 1px solid #1c1c1c
 
     &__bottom
         width: 100%

@@ -98,15 +98,17 @@ export default class HomePage extends Vue {
 .home-page
     display: flex
     flex-direction: column
-    height: calc(100vh - 144px)
-    border-radius: 16px
+    height: 100%
+
+    p
+        color: #fff
 
 .home-content
     padding: 12px
     border-radius: 16px
     transition: all .2s
     border: 1px solid #1c1c1c
-    margin-bottom: 12px
+    margin-bottom: 20px
 
 .play-box
     display: flex
@@ -214,10 +216,11 @@ export default class HomePage extends Vue {
             font-size: 12px
 
     .home-page
+        height: calc( 100vh - 12px )
         overflow-y: scroll
 
     .play-box
-        height: 272px
+        height: 260px
 
     .home-content
         padding: 12px
