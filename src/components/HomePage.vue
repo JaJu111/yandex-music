@@ -54,7 +54,58 @@
                 </div>
             </div>
 
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit minima inventore, sint quos facere, iste repudiandae accusamus placeat neque ut error totam ipsam deserunt dolorum necessitatibus distinctio quod soluta numquam quidem nesciunt. Numquam incidunt consequatur labore, at fuga voluptatum corrupti! Impedit consectetur quaerat esse fugit quasi, accusamus nobis eaque sequi earum? Nisi fugit vitae voluptates officia repellendus odit quasi esse amet delectus sequi sapiente aliquam doloremque qui at est consequuntur minima laborum adipisci, vel velit quas. Error voluptatibus aperiam modi eligendi nam inventore in a veritatis quas non, dolor voluptas ipsum temporibus quibusdam tempore sapiente reiciendis! Saepe provident doloribus ab voluptas, quia molestiae in officia? Saepe sed quaerat, quibusdam nam non neque soluta quae quas dolores adipisci, at cum accusantium!</p>
+            <div class="home-content" :style="{ backgroundColor: currentColor }">
+                <div class="play-box">
+                    <div @click="getPlaying">
+                        <i v-if="!isPlaying" class="fa-solid fa-play"></i>
+
+                        <i v-if="isPlaying" class="fa-solid fa-pause"></i>
+
+                        <h1>Моя волна</h1>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <div class="for-you-box">
+                        <div class="for-you-box__left">
+                            <div>
+                                <img src="../assets/marshmello.jpg">
+                            </div>
+                            <div>
+                                <img src="../assets/alan.jpg">
+                            </div>
+                        </div>
+                        <div class="for-you-box__right">
+                            <h1>Для вас</h1>
+                            <span>Alan Walker, Marshmello</span>
+                        </div>
+                    </div>
+
+                    <div class="info-box__bottom">
+                        <div class="i-like-box">
+                            <div class="img-box">
+                                <img src="../assets/i-like.jpg">
+                            </div>
+
+                            <div class="img-info-box">
+                                <h1>Мне нравится</h1>
+                                <span>189 треков</span>
+                            </div>
+                        </div>
+
+                        <div class="i-like-box">
+                            <div class="img-box">
+                                <i class="fa-solid fa-clock-rotate-left"></i>
+                            </div>
+
+                            <div class="img-info-box">
+                                <h1>История</h1>
+                                <span>Justin Leroy, Cartoon</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -99,9 +150,6 @@ export default class HomePage extends Vue {
     display: flex
     flex-direction: column
     height: 100%
-
-    p
-        color: #fff
 
 .home-content
     padding: 12px
@@ -218,9 +266,6 @@ export default class HomePage extends Vue {
     .home-page
         height: calc( 100vh - 12px )
         overflow-y: scroll
-
-        p
-            margin-bottom: 136px
 
     .play-box
         height: 260px
