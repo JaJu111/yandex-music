@@ -76,6 +76,7 @@ export default class HomePage extends Vue {
     flex-direction: column
     justify-content: space-between
     height: calc(100vh - 125px)
+    // height: calc(100vh - 26px)
     padding: 12px
     border-radius: 16px
     transition: all .2s
@@ -111,6 +112,8 @@ export default class HomePage extends Vue {
     background-color: #252525
     border-radius: 32px
     padding: 6px 12px
+    cursor: pointer
+    transition: all .2s
 
     h1
         color: #fff
@@ -135,6 +138,15 @@ export default class HomePage extends Vue {
 
         h1
             margin-top: 4px
+
+.for-you-box:hover
+    background-color: #2f2f2f
+
+    
+
+@media (max-width: 768px)
+    .home-page
+        height: calc(100vh - 26px)
 
     
 @media (max-width: 430px)
