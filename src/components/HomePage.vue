@@ -98,6 +98,7 @@ export default class HomePage extends Vue {
 .home-page
     display: flex
     flex-direction: column
+    height: 100%
 
     p
         color: #fff
