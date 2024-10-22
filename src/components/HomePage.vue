@@ -35,7 +35,7 @@
                             </div>
 
                             <div class="img-info-box">
-                                <h1>Мне нравится</h1>
+                                <h1>Мне нравится <i class="fa-solid fa-chevron-right"></i></h1>
                                 <span>189 треков</span>
                             </div>
                         </div>
@@ -46,7 +46,7 @@
                             </div>
 
                             <div class="img-info-box">
-                                <h1>История</h1>
+                                <h1>История <i class="fa-solid fa-chevron-right"></i></h1>
                                 <span>Justin Leroy, Cartoon</span>
                             </div>
                         </div>
@@ -54,57 +54,8 @@
                 </div>
             </div>
 
-            <div class="home-content" :style="{ backgroundColor: currentColor }">
-                <div class="play-box">
-                    <div @click="getPlaying">
-                        <i v-if="!isPlaying" class="fa-solid fa-play"></i>
-
-                        <i v-if="isPlaying" class="fa-solid fa-pause"></i>
-
-                        <h1>Моя волна</h1>
-                    </div>
-                </div>
-
-                <div class="info-box">
-                    <div class="for-you-box">
-                        <div class="for-you-box__left">
-                            <div>
-                                <img src="../assets/marshmello.jpg">
-                            </div>
-                            <div>
-                                <img src="../assets/alan.jpg">
-                            </div>
-                        </div>
-                        <div class="for-you-box__right">
-                            <h1>Для вас</h1>
-                            <span>Alan Walker, Marshmello</span>
-                        </div>
-                    </div>
-
-                    <div class="info-box__bottom">
-                        <div class="i-like-box">
-                            <div class="img-box">
-                                <img src="../assets/i-like.jpg">
-                            </div>
-
-                            <div class="img-info-box">
-                                <h1>Мне нравится</h1>
-                                <span>189 треков</span>
-                            </div>
-                        </div>
-
-                        <div class="i-like-box">
-                            <div class="img-box">
-                                <i class="fa-solid fa-clock-rotate-left"></i>
-                            </div>
-
-                            <div class="img-info-box">
-                                <h1>История</h1>
-                                <span>Justin Leroy, Cartoon</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="new-release">
+                <h1>Новые релизы <i class="fa-solid fa-chevron-right"></i></h1>
             </div>
         </div>
     </div>
@@ -156,7 +107,7 @@ export default class HomePage extends Vue {
     border-radius: 16px
     transition: all .2s
     border: 1px solid #1c1c1c
-    margin-bottom: 20px
+    margin-bottom: 24px
 
 .play-box
     display: flex
@@ -172,11 +123,11 @@ export default class HomePage extends Vue {
         cursor: pointer
 
     i
-        color: #fff
+        color: #ebebeb
         font-size: 30px
 
     h1
-        color: #fff
+        color: #ebebeb
         margin-left: 12px
         font-size: 20px
         font-weight: bold
@@ -193,7 +144,7 @@ export default class HomePage extends Vue {
     margin-bottom: 12px
 
     h1
-        color: #fff
+        color: #ebebeb
 
     &__left
         display: flex
@@ -232,6 +183,7 @@ export default class HomePage extends Vue {
     height: 70px
     background-color: #252525
     border-radius: 8px
+    cursor: pointer
 
 .img-box
     display: flex
@@ -251,17 +203,57 @@ export default class HomePage extends Vue {
 
 .img-info-box
     h1
+        font-size: 22px
+        font-weight: 500
         color: #ebebeb
+
+        i
+            font-size: 16px
+            color: #878787
+            transition: all .2s
+
+    h1:hover
+        i
+            margin-left: 10px
 
     span
         font-size: 14px
         color: #878787
+
+
+.new-release
+    h1
+        font-size: 22px
+        font-weight: 500
+        color: #ebebeb
+
+        i
+            font-size: 16px
+            color: #878787
+            transition: all .2s
+
+    h1:hover
+        i
+            margin-left: 10px
     
 
 @media (max-width: 768px)
     .img-info-box
         span
             font-size: 12px
+
+        h1
+            font-size: 16px
+
+            i
+                font-size: 12px
+
+    .new-release
+        h1
+            font-size: 16px
+
+            i
+                font-size: 12px
 
     .home-page
         height: calc( 100vh - 12px )
@@ -275,6 +267,9 @@ export default class HomePage extends Vue {
         border-radius: 16px
         transition: all .2s
         border: 1px solid #1c1c1c
+
+    .new-release
+        margin-bottom: 136px
 
     
 @media (max-width: 430px)
