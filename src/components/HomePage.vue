@@ -1,36 +1,60 @@
 <template>
     <div>
-        <div class="home-page" :style="{ backgroundColor: currentColor }">
-            <div class="play-box">
-                <div @click="getPlaying">
-                    <i v-if="!isPlaying" class="fa-solid fa-play"></i>
+        <div class="home-page">
+            <div class="home-content" :style="{ backgroundColor: currentColor }">
+                <div class="play-box">
+                    <div @click="getPlaying">
+                        <i v-if="!isPlaying" class="fa-solid fa-play"></i>
 
-                    <i v-if="isPlaying" class="fa-solid fa-pause"></i>
+                        <i v-if="isPlaying" class="fa-solid fa-pause"></i>
 
-                    <h1>Моя волна</h1>
-                </div>
-            </div>
-
-            <div class="info-box">
-                <div class="for-you-box">
-                    <div class="for-you-box__left">
-                        <div>
-                            <img src="../assets/marshmello.jpg">
-                        </div>
-                        <div>
-                            <img src="../assets/alan.jpg">
-                        </div>
-                    </div>
-                    <div class="for-you-box__right">
-                        <h1>Для вас</h1>
-                        <span>Alan Walker, Marshmello</span>
+                        <h1>Моя волна</h1>
                     </div>
                 </div>
 
-                <div class="i-like-box">
-                    <h1>I like</h1>
+                <div class="info-box">
+                    <div class="for-you-box">
+                        <div class="for-you-box__left">
+                            <div>
+                                <img src="../assets/marshmello.jpg">
+                            </div>
+                            <div>
+                                <img src="../assets/alan.jpg">
+                            </div>
+                        </div>
+                        <div class="for-you-box__right">
+                            <h1>Для вас</h1>
+                            <span>Alan Walker, Marshmello</span>
+                        </div>
+                    </div>
+
+                    <div class="info-box__bottom">
+                        <div class="i-like-box">
+                            <div class="img-box">
+                                <img src="../assets/i-like.jpg">
+                            </div>
+
+                            <div class="img-info-box">
+                                <h1>Мне нравится</h1>
+                                <span>189 треков</span>
+                            </div>
+                        </div>
+
+                        <div class="i-like-box">
+                            <div class="img-box">
+                                <i class="fa-solid fa-clock-rotate-left"></i>
+                            </div>
+
+                            <div class="img-info-box">
+                                <h1>История</h1>
+                                <span>Justin Leroy, Cartoon</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit minima inventore, sint quos facere, iste repudiandae accusamus placeat neque ut error totam ipsam deserunt dolorum necessitatibus distinctio quod soluta numquam quidem nesciunt. Numquam incidunt consequatur labore, at fuga voluptatum corrupti! Impedit consectetur quaerat esse fugit quasi, accusamus nobis eaque sequi earum? Nisi fugit vitae voluptates officia repellendus odit quasi esse amet delectus sequi sapiente aliquam doloremque qui at est consequuntur minima laborum adipisci, vel velit quas. Error voluptatibus aperiam modi eligendi nam inventore in a veritatis quas non, dolor voluptas ipsum temporibus quibusdam tempore sapiente reiciendis! Saepe provident doloribus ab voluptas, quia molestiae in officia? Saepe sed quaerat, quibusdam nam non neque soluta quae quas dolores adipisci, at cum accusantium!</p>
         </div>
     </div>
 </template>
@@ -74,12 +98,15 @@ export default class HomePage extends Vue {
 .home-page
     display: flex
     flex-direction: column
-    justify-content: space-between
-    height: calc(100vh - 125px)
-    // height: calc(100vh - 26px)
+    height: calc(100vh - 144px)
+    border-radius: 16px
+
+.home-content
     padding: 12px
     border-radius: 16px
     transition: all .2s
+    border: 1px solid #1c1c1c
+    margin-bottom: 12px
 
 .play-box
     display: flex
@@ -87,7 +114,6 @@ export default class HomePage extends Vue {
     align-items: center
     width: 100%
     height: 320px
-    // background: red
     border-radius: 8px
 
     div
@@ -114,6 +140,7 @@ export default class HomePage extends Vue {
     padding: 6px 12px
     cursor: pointer
     transition: all .2s
+    margin-bottom: 12px
 
     h1
         color: #fff
@@ -142,11 +169,61 @@ export default class HomePage extends Vue {
 .for-you-box:hover
     background-color: #2f2f2f
 
+.info-box__bottom
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
+    grid-gap: 12px
+
+.i-like-box
+    display: flex
+    align-items: center
+    padding: 0 12px
+    gap: 12px
+    height: 70px
+    background-color: #252525
+    border-radius: 8px
+
+.img-box
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 50px
+    height: 50px
+    border-radius: 6px
+    background-color: #373737
+
+    i
+        color: #ebebeb
+        font-size: 20px
+
+    img
+        border-radius: 6px
+
+.img-info-box
+    h1
+        color: #ebebeb
+
+    span
+        font-size: 14px
+        color: #878787
     
 
 @media (max-width: 768px)
+    .img-info-box
+        span
+            font-size: 12px
+
     .home-page
-        height: calc(100vh - 26px)
+        overflow-y: scroll
+
+    .play-box
+        height: 272px
+
+    .home-content
+        padding: 12px
+        border-radius: 16px
+        transition: all .2s
+        border: 1px solid #1c1c1c
 
     
 @media (max-width: 430px)

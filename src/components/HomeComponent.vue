@@ -80,7 +80,7 @@ export default class HomeComponent extends Vue {}
     display: none
     position: fixed
     width: 100%
-    height: 110px
+    height: 120px
     bottom: 0
     left: 0
     backdrop-filter: blur(20px)
@@ -91,7 +91,7 @@ export default class HomeComponent extends Vue {}
     display: none
     position: fixed
     width: 100%
-    height: 110px
+    height: 120px
     bottom: 0
     left: 0
     background-color: #1a1a1a
@@ -208,7 +208,7 @@ export default class HomeComponent extends Vue {}
         top: 0
         width: 68px
         align-items: center
-        padding: 30px 0 132px 0
+        padding: 30px 0 152px 0
 
         &__box
             .logo
@@ -225,6 +225,9 @@ export default class HomeComponent extends Vue {}
                 display: none
 
     .aside-right
+        border: none
+        background-color: #000
+
         &__bottom
             display: none
 
