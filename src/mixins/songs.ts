@@ -3,7 +3,7 @@ import { ISongs } from './interface';
 
 @Component
 export default class SongsMixin extends Vue {
-    songs: ISongs[] = [
+    songs: any[] = [
         {
             title: 'Faded',
             text: 'Alan Walker',
